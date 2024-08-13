@@ -2,3 +2,5 @@ node_modules
 db
 .vscode
 .env
+.env.test
+dist
