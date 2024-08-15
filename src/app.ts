@@ -1,11 +1,16 @@
 import fastify from 'fastify'
-import { transactionsRoutes } from './routes/transactions'
+import { mealsRoutes } from './routes/meals'
 import cookie from '@fastify/cookie'
+import { userRoutes } from './routes/user'
 
 export const app = fastify()
 
 app.register(cookie)
 
-app.register(transactionsRoutes, {
-  prefix: 'transactions',
+app.register(mealsRoutes, {
+  prefix: 'meals',
+})
+
+app.register(userRoutes, {
+  prefix: 'user',
 })
